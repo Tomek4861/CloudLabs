@@ -9,4 +9,5 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('contact', views.contact_page, name='contact'),
     path('portfolio', views.portfolio_page, name='portfolio')
+    # path('portfolio/photo/<int:photo_id>/', views.portfolio_page, name='portfolio')
 ]
