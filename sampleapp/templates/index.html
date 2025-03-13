@@ -1,3 +1,56 @@
 {% extends 'base.html' %}
 
-{% block title %}TODO{% endblock %}
+{% load static %}
+
+{% block title %}Home - Photography Portfolio{% endblock %}
+
+{% block content %}
+
+<header class="text-center py-5 bg-light">
+    <h1 class="display-4">Welcome to My Photography Portfolio</h1>
+    <p class="lead">Capturing moments, telling stories, creating memories.</p>
+    <a href="/portfolio" class="btn btn-primary btn-lg mt-3">View My Work</a>
+</header>
+
+<!-- About Section -->
+<section class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="{% static 'images/camera.jpg' %}" alt="Photographer at work" class="img-fluid rounded" width="500">
+        </div>
+        <div class="col-md-6">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate photographer specializing in landscape, portrait, and travel photography.
+                With years of experience behind the lens, I aim to capture the beauty of the world in its purest form.
+            </p>
+            <a href="/contact" class="btn btn-outline-primary">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <h2 class="text-center mb-4">Featured Photos</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'images/img1.jpg' %}" class="img-fluid rounded shadow-sm mb-3" alt="Mountain View">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/img2.jpg' %}" class="img-fluid rounded shadow-sm mb-3" alt="Sunset Peaks">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/img3.jpg' %}" class="img-fluid rounded shadow-sm mb-3" alt="Ferris Wheel">
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <a href="/portfolio" class="btn btn-secondary">See More</a>
+    </div>
+</section>
+
+<section class="text-center py-5 bg-dark text-white">
+    <h2>Let's Create Something Amazing</h2>
+    <p class="lead">Looking for a photographer?</p>
+    <a href="/contact" class="btn btn-light btn-lg">Contact Me</a>
+</section>
+
+{% endblock %}

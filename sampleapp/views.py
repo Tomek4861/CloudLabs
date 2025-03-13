@@ -28,6 +28,11 @@ def home(request):
     return render(request, 'index.html')
 
 
+def portfolio_page(request):
+    print("Ten widok")
+    return render(request, 'portfolio.html')
+
+
 def contact_page(request):
     if request.method == 'POST':
         form = forms.ContactForm(request.POST)
