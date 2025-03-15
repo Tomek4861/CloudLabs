@@ -1,0 +1,24 @@
+service: my-django-app
+
+provider:
+  name: aws
+  runtime: python3.10
+  stage: dev
+  region: eu-central-1
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+
+custom:
+  wsgi:
+    app: myproject.wsgi.application
+  pythonRequirements:
+    dockerizePip: true
+
+functions:
+  django:
+    handler: wsgi_handler.handler
+    events:
+      - http: ANY /
+      - http: ANY {proxy+}
