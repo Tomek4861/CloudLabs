@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 5. Otworzenie portu dla aplikacji
 EXPOSE 8000
 
-# 6. Ustawienie punktu wejscia dla kontenera
+# 6. Ustawienie punktug wejscia dla kontenera
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
